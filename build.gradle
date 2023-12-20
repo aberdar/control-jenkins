@@ -25,6 +25,10 @@ tasks.withType(Test) {
     systemProperty "file.encoding", "UTF-8"
 }
 
+test {
+    useJUnitPlatform()
+}
+
 allprojects {
     gradle.projectsEvaluated {
         tasks.withType(JavaCompile) {
